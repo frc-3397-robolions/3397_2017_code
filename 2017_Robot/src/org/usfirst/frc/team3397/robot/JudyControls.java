@@ -32,8 +32,7 @@ public class JudyControls {
 		joystickController = new Joystick(joystickPort);
 	}
 	
-	// XBox controls
-	
+	// Xbox controls
 	boolean getCamera() {
 		return xboxController.getYButton();
 	}
@@ -60,11 +59,11 @@ public class JudyControls {
 	}
 	
 	boolean getIntake() {
-		return joystickController.getRawButton(2);
+		return joystickController.getRawButton(3);
 	}
 	
 	boolean getOuttake() {
-		return joystickController.getRawButton(3);
+		return joystickController.getRawButton(2);
 	}
 	
 	boolean getAgitatorLeft() {
@@ -76,15 +75,31 @@ public class JudyControls {
 	}
 	
 	boolean getDoorOpen() {
-		return joystickController.getRawButton(6);
-	}
-	
-	boolean getDoorClose() {
 		return joystickController.getRawButton(7);
 	}
 	
+	boolean getDoorClose() {
+		return joystickController.getRawButton(6);
+	}
+	
 	boolean getClimb() {
-		return joystickController.getRawButton(8);
+		return xboxController.getRawButton(1);
+	}
+	
+	boolean getClimbDown() {
+		return xboxController.getRawButton(2);
+	}
+	
+	boolean getRampUp() {
+		return joystickController.getRawButton(11);
+	}
+	
+	boolean getRampDown() {
+		return joystickController.getRawButton(10);
+	}
+	
+	boolean getReset() {
+		return joystickController.getRawButton(9);
 	}
 	
 	
